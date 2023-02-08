@@ -7,20 +7,20 @@ import (
 )
 
 func main() {
-	OwnerEmail := "nillaveecakes@gmail.com"
+	OwnerEmail := "example@gmail.com"
 	// OwnerEmail := os.Getenv("OwnerEmail")
 	// WebsiteLink := os.Getenv("WebsiteLink")
 	// Phone := os.Getenv("Phone")
 	m := mail.NewMessage()
-	customeremail := "myrachanto@gmail.com"
+	customeremail := "example2@gmail.com"
 	name := "chantos"
 	amount := 5600
 	Phone := "0729308456"
 	WebsiteLink := "https://nillavee.co.ke"
 
-	m.SetHeader("From", "nillaveecakes@gmail.com")
+	m.SetHeader("From", "example@gmail.com")
 
-	// m.SetHeader("To", "myrachanto@gmail.com", "myrachanto1@gmail.com")
+	// m.SetHeader("To", "example2@gmail.com", "example@gmail.com")
 	m.SetHeader("To", customeremail)
 
 	m.SetAddressHeader("Cc", OwnerEmail, "Nillavees Cakes and Patries")
@@ -31,7 +31,7 @@ func main() {
 
 	m.Attach("logo.png")
 
-	d := mail.NewDialer("smtp.gmail.com", 587, "myrachanto1@gmail.com", "clndtmuohtfnynmi")
+	d := mail.NewDialer("smtp.gmail.com", 587, "example@gmail.com", "secret")
 
 	// Send the email to Kate, Noah and Oliver.
 
@@ -42,11 +42,11 @@ func main() {
 	}
 	// m := mail.NewMessage()
 
-	// m.SetHeader("From", "myrachanto1@gmail.com")
+	// m.SetHeader("From", "example@gmail.com")
 
-	// m.SetHeader("To", "myrachanto@gmail.com", "myrachanto1@gmail.com")
+	// m.SetHeader("To", "example2@gmail.com", "example@gmail.com")
 
-	// m.SetAddressHeader("Cc", "myrachantos@gmail.com", "chantos")
+	// m.SetAddressHeader("Cc", "example2s@gmail.com", "chantos")
 
 	// m.SetHeader("Subject", "Hello!")
 
@@ -54,7 +54,7 @@ func main() {
 
 	// m.Attach("logo.png")
 
-	// d := mail.NewDialer("smtp.gmail.com", 587, "myrachanto1@gmail.com", "clndtmuohtfnynmi")
+	// d := mail.NewDialer("smtp.gmail.com", 587, "example@gmail.com", "clndtmuohtfnynmi")
 
 	// // Send the email to Kate, Noah and Oliver.
 
@@ -75,7 +75,7 @@ func main() {
 
 // func main() {
 // 	//set the email
-// 	email := "myrachanto@gmail.com"
+// 	email := "example2@gmail.com"
 // 	subject := "AKGL ALI is the best :D"
 // 	body := "This is the body part you send whatever you want in the body."
 // 	err := sendEmail(email, subject, body)
@@ -94,7 +94,7 @@ func main() {
 // 	// }
 // 	//    from := os.Getenv("MAIL")
 // 	//    password := os.Getenv("PASSWD")
-// 	from := "myrachanto1@gmail.com"
+// 	from := "example@gmail.com"
 // 	password := "clndtmuohtfnynmi"
 // 	host := "smtp.gmail.com"
 // 	port := 587
