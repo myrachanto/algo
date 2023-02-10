@@ -5,14 +5,15 @@ import "fmt"
 type FuncInt func([]int) int
 
 type store struct {
-	db []int
+	db      []int
+	FuncInt FuncInt
 }
 
 func NewStore(d []int) *store {
 	return &store{db: d}
 }
-func (s *store) Handler(f func([]int) int) {
-	fmt.Println(f(s.db))
+func (s *store) Handler() {
+	fmt.Println(s.FuncInt(s.db))
 }
 func getTotal(d []int) int {
 	var sum int
@@ -45,10 +46,14 @@ func getMin(d []int) int {
 func main() {
 	slice := []int{2, 4, 3, 5, 9, 7, 8, 6}
 	store := NewStore(slice)
-	store.Handler(getMax)
-	store.Handler(getMean)
-	store.Handler(getTotal)
-	store.Handler(getMin)
+	store.FuncInt = getMax
+	store.Handler()
+	store.FuncInt = getMean
+	store.Handler()
+	store.FuncInt = getTotal
+	store.Handler()
+	store.FuncInt = getMin
+	store.Handler()
 }
 
 // type FuncString func(string) string
