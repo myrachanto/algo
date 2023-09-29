@@ -84,7 +84,6 @@ func (s *Store) Driverrates() []Driver {
 	}
 	return results
 }
-
 func Driverrates(data map[string][]Trip) []Driver {
 	results := []Driver{}
 	for name, trip := range data {

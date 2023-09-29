@@ -14,8 +14,7 @@ func NewStore(d []int) *store {
 func (s *store) Handler(f func([]int) int) {
 	fmt.Println(f(s.db))
 }
-func getTotal(d []int) int {
-	var sum int
+func getTotal(d []int) (sum int) {
 	for _, k := range d {
 		sum += k
 	}

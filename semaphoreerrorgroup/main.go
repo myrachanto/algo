@@ -20,9 +20,6 @@ func dosomething(i int) error {
 	if i%5 == 0 {
 		fmt.Printf("%d is divisble by five\n", i)
 	}
-	if i%7 == 0 {
-		fmt.Printf("%d is divisble by seven\n", i)
-	}
 	if i%11 == 0 {
 		fmt.Printf("%d is divisble by eleven\n", i)
 	}
@@ -33,7 +30,7 @@ func dosomething(i int) error {
 }
 func main() {
 	errGroup, ctx := errgroup.WithContext(context.Background())
-	for i := 0; i < 400; i++ {
+	for i := 0; i < 1000; i++ {
 		fmt.Printf("%d ======> is the number of Goroutines running \n", runtime.NumGoroutine())
 		if err := sema.Acquire(ctx, 1); err != nil {
 			log.Fatal(err)

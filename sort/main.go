@@ -7,10 +7,37 @@ import (
 
 func main() {
 	ls := []int{3, 2, 6, 4, 7, 1, 9, 8, 0, 5}
-	results := BubbleSort(ls)
-	fmt.Println(results)
+	SelectionSort(ls)
+	fmt.Println(ls)
 }
-
+func BubbleSort(ls []int) []int {
+	n := len(ls)
+	swapped := true
+	for swapped {
+		swapped = false
+		for i := 0; i < n-1; i++ {
+			if ls[i] > ls[i+1] {
+				ls[i], ls[i+1] = ls[i+1], ls[i]
+				swapped = true
+			}
+		}
+	}
+	return ls
+}
+func SelectionSort(ls []int) {
+	l := len(ls)
+	for i := 0; i < l; i++ {
+		min := i
+		temp := ls[i]
+		for j := i + 1; j < l; j++ {
+			if ls[j] < ls[min] {
+				min = j
+			}
+		}
+		ls[i] = ls[min]
+		ls[min] = temp
+	}
+}
 func MergeSort(ls []int) []int {
 	if len(ls) < 2 {
 		return ls
@@ -58,20 +85,6 @@ func Merge2(left, right []int) []int {
 	return ls
 
 }
-func BubbleSort(ls []int) []int{
-	n := len(ls)
-	swapped := true
-	for swapped {
-		swapped = false
-		for i := 0; i < n-1; i++{
-			if ls[i]> ls[i+1]{
-				ls[i], ls[i+1] = ls[i+1],ls[i]
-				swapped = true
-			}
-		}
-	}
-	return ls
-}
 func QuickSort(ls []int) []int {
 	if len(ls) < 2 {
 		return ls
@@ -79,18 +92,17 @@ func QuickSort(ls []int) []int {
 	left, right := 0, len(ls)-1
 	pivot := rand.Int() % len(ls)
 	ls[pivot], ls[right] = ls[right], ls[pivot]
-	for i, _ := range ls{
-		if ls[i] < ls[right]{
-			ls[left],ls[i] = ls[i],ls[left]
+	for i, _ := range ls {
+		if ls[i] < ls[right] {
+			ls[left], ls[i] = ls[i], ls[left]
 			left++
 		}
 	}
-	ls[left],ls[right] = ls[right],ls[left]
+	ls[left], ls[right] = ls[right], ls[left]
 	QuickSort(ls[:left])
 	QuickSort(ls[left+1:])
 	return ls
 }
-
 
 // func trymergerSort(listA, listB []int) []int {
 // 	var results []int

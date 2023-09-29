@@ -61,7 +61,7 @@ func main() {
 	for i := 1; i <= 10; i++ {
 		go func(i int) {
 			mapa.Insert(i, fmt.Sprintf(" goroutine %d working", i))
-		}(i)
+		}(i) 
 	}
 	for j := 1; j <= 10; j++ {
 		v, _ := mapa.Get(j)

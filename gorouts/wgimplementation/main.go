@@ -10,7 +10,6 @@ var (
 	// wg sync.WaitGroup = sync.WaitGroup{}
 	wg = &waitGroup{}
 )
-
 // naive implementation o wait groups
 type waitGroup struct {
 	counter int32

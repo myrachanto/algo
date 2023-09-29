@@ -22,6 +22,10 @@ func main() {
 	a := []int{3, 2, 1, 4, 3, 2, 1, 4, 1, 5, 5, 6, 7, 6} // any item can be sorted
 	res := inpalaceDups(a)
 	fmt.Println(res)
+	as := []int{1, 2, 3, 4, 5}
+	bs := []int{0, 0, 0}
+	copy(bs, as)
+	fmt.Println("----------------", bs)
 
 }
 func sorting(a []int) {
@@ -62,7 +66,7 @@ func Batching(a []int, batchSize int) [][]int {
 func inpalaceDups(a []int) []int {
 	sort.Ints(a)
 	j := 0
-	for i := 1; i < len(a); i++ {  
+	for i := 1; i < len(a); i++ {
 		if a[j] == a[i] {
 			continue
 		}

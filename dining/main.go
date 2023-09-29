@@ -57,6 +57,7 @@ func diningProblem(phil string, forkLeft, forkRight *sync.Mutex) {
 }
 func main() {
 	log.Println("Dining philosophers problem")
+	time.Sleep(5 * time.Second)
 	// spawn go routines
 	forkLeft := &sync.Mutex{}
 	wg.Add(len(philosophers))

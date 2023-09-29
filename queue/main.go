@@ -28,3 +28,44 @@ func main() {
 	r := ques.Dequeue()
 	fmt.Println(ques, r)
 }
+
+type queuelinked struct {
+	First  *node
+	Last   *node
+	length int
+}
+type node struct {
+	yeild int
+	next  *node
+}
+
+func (q *queuelinked) Enqueue(yeild int) {
+	newnode := &node{yeild: yeild}
+	if q.length == 0 {
+		q.First = newnode
+		q.Last = newnode
+		q.length = 1
+	}
+	// holder := q.Last
+	q.Last.next = newnode
+	q.Last = newnode
+	q.length++
+}
+func (q *queuelinked) Peek() *node {
+	return q.First
+}
+func (q *queuelinked) Dequeue() {
+	if q.First == nil {
+		return
+	}
+	if q.length == 1 {
+		q.Last = nil
+		q.First = nil
+		q.length = 0
+		return
+	}
+	// holding := q.Top
+	q.First = q.First.next
+	q.length--
+
+}
