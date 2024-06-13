@@ -7,8 +7,19 @@ import (
 
 func main() {
 	ls := []int{3, 2, 6, 4, 7, 1, 9, 8, 0, 5}
-	SelectionSort(ls)
+	QuickSort(ls)
 	fmt.Println(ls)
+}
+func InsertionSort(ls []int) {
+	for i := 1; i < len(ls); i++ {
+		key := ls[i]
+		j := i - 1
+		for j >= 0 && ls[j] > key {
+			ls[j+1] = ls[j]
+			j--
+		}
+		ls[j+1] = key
+	}
 }
 func BubbleSort(ls []int) []int {
 	n := len(ls)
@@ -92,7 +103,7 @@ func QuickSort(ls []int) []int {
 	left, right := 0, len(ls)-1
 	pivot := rand.Int() % len(ls)
 	ls[pivot], ls[right] = ls[right], ls[pivot]
-	for i, _ := range ls {
+	for i := range ls {
 		if ls[i] < ls[right] {
 			ls[left], ls[i] = ls[i], ls[left]
 			left++

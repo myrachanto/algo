@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/big"
+)
 
 func primer(limit int) []int {
 	primes := []int{2}
@@ -21,5 +24,8 @@ func filter(n int, m []int) bool {
 	return res
 }
 func main() {
-	fmt.Println(primer(100))
+	fmt.Println(IsPrime(97))
+}
+func IsPrime(n int) bool {
+	return big.NewInt(int64(n)).ProbablyPrime(0)
 }

@@ -5,6 +5,13 @@ import (
 )
 
 func main() {
+	arr := []int{0, 1, 2}
+	for i, v := range arr {
+		arr[2] = 10
+		if i == 2 {
+			fmt.Println(v)
+		}
+	}
 	ls := []int{4, 4, 5}
 	ls = append(ls, 2)
 	fmt.Println(ls)
@@ -23,7 +30,7 @@ func main() {
 	sl := []int{1, 2, 3, 4, 5, 6, 7, 8}
 	sl2 := []int{}
 	sl2s := []int{}
-	copy(sl,sl2s)//doesnt work!!!!!
+	copy(sl, sl2s) //doesnt work!!!!!
 	fmt.Println("coping slices ---------------", sl2s)
 	for _, j := range sl {
 		if j == 5 {
@@ -49,7 +56,7 @@ l1:
 	fmt.Println("My Name start with --->>>>", str[:3])
 	str += "s"
 	fmt.Println(str)
-	a := 2 
+	a := 2
 	fmt.Printf("a: %8T %[1]v\n", a)
 	v := make([]int, 4, 4)
 	v = append(v, 5) //this will append from index 5 [00005]

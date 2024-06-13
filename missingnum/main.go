@@ -153,7 +153,7 @@ func BracketBalanced(str string) bool {
 	}
 	return res
 
-}
+} 
 func BracketBalanced1(str string) bool {
 	res := true
 	compare := map[rune]rune{
@@ -220,7 +220,7 @@ func missingNum(nums []int) int {
 	missingNumber := expectedSum - actualSum
 	return missingNumber
 }
-
+ 
 // func mapSlice(data map[int]int) []int{
 
 // }

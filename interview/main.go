@@ -39,6 +39,7 @@ func slicer() {
 // 5. what is wrong with the function below
 func sliceCopier() {
 	data := [][2]byte{{1, 2}, {3, 4}, {5, 6}}
+	// slog.info()
 	results := [][]byte{}
 	for _, item := range data {
 		res := make([]byte, len(item))
