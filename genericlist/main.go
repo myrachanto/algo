@@ -42,12 +42,3 @@ func main() {
 	db.Remove(3)
 	fmt.Println(db)
 }
-
-type shape[T comparable] struct {
-	width  T
-	height T
-}
-
-func (s *shape[T]) Area() T {
-	return s.height * s.width
-}
