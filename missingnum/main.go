@@ -77,27 +77,27 @@ func reverseString(str string) string {
 	return strings.Join(final, "")
 }
 
-func mytargetSolution(target int, arr []int) []res {
-	complemetary := make(map[int]int)
-	found := make(map[int]bool)
-	for _, v := range arr {
-		if v <= target {
-			complemetary[v] = target - v
-		}
-	}
-	ress := []res{}
-	for _, k := range arr {
-		if r, ok := complemetary[k]; ok {
-			if _, ok := complemetary[r]; ok {
-				if k >= r && !found[k] {
-					ress = append(ress, res{k, r})
-					found[k] = true
-				}
-			}
-		}
-	}
-	return ress
-}
+//	func mytargetSolution(target int, arr []int) []res {
+//		complemetary := make(map[int]int)
+//		found := make(map[int]bool)
+//		for _, v := range arr {
+//			if v <= target {
+//				complemetary[v] = target - v
+//			}
+//		}
+//		ress := []res{}
+//		for _, k := range arr {
+//			if r, ok := complemetary[k]; ok {
+//				if _, ok := complemetary[r]; ok {
+//					if k >= r && !found[k] {
+//						ress = append(ress, res{k, r})
+//						found[k] = true
+//					}
+//				}
+//			}
+//		}
+//		return ress
+//	}
 func findSumInts(target int, arr []int) []res {
 	ress := []res{}
 	found := make(map[int]bool)
@@ -153,7 +153,7 @@ func BracketBalanced(str string) bool {
 	}
 	return res
 
-} 
+}
 func BracketBalanced1(str string) bool {
 	res := true
 	compare := map[rune]rune{
@@ -208,19 +208,20 @@ func IsBalanced2(text string) bool {
 
 	return isBalanced
 }
-func missingNum(nums []int) int {
-	n := len(nums)
 
-	expectedSum := (n * (n + 1)) / 2
+// func missingNum(nums []int) int {
+// 	n := len(nums)
 
-	actualSum := 0
-	for _, num := range nums {
-		actualSum += num
-	}
-	missingNumber := expectedSum - actualSum
-	return missingNumber
-}
- 
+// 	expectedSum := (n * (n + 1)) / 2
+
+// 	actualSum := 0
+// 	for _, num := range nums {
+// 		actualSum += num
+// 	}
+// 	missingNumber := expectedSum - actualSum
+// 	return missingNumber
+// }
+
 // func mapSlice(data map[int]int) []int{
 
 // }
