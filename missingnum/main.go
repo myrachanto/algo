@@ -77,27 +77,6 @@ func reverseString(str string) string {
 	return strings.Join(final, "")
 }
 
-//	func mytargetSolution(target int, arr []int) []res {
-//		complemetary := make(map[int]int)
-//		found := make(map[int]bool)
-//		for _, v := range arr {
-//			if v <= target {
-//				complemetary[v] = target - v
-//			}
-//		}
-//		ress := []res{}
-//		for _, k := range arr {
-//			if r, ok := complemetary[k]; ok {
-//				if _, ok := complemetary[r]; ok {
-//					if k >= r && !found[k] {
-//						ress = append(ress, res{k, r})
-//						found[k] = true
-//					}
-//				}
-//			}
-//		}
-//		return ress
-//	}
 func findSumInts(target int, arr []int) []res {
 	ress := []res{}
 	found := make(map[int]bool)
