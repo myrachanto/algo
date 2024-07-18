@@ -14,11 +14,9 @@ func deferer() {
 // 2. what is wrong with this function and how can you solve it?
 func copier() {
 	data := []int{1, 2, 3, 4, 5, 6}
-	mapa := make([]int, 5)
-	for _, d := range data {
-		mapa = append(mapa, d)
-	}
-	fmt.Println(mapa)
+	list := make([]int, 5)
+	list = append(list, data...)
+	fmt.Println(list)
 }
 
 // 3. what is the result of the following question?
@@ -32,7 +30,7 @@ func adder() {
 func slicer() {
 	data := []int{1, 2, 3, 4, 5, 6}
 	res := data[:3]
-	final := res[2:4]
+	final := res[2:5]
 	fmt.Println(final)
 }
 

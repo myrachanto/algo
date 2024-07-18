@@ -104,6 +104,8 @@ func twoSum(nums []int, target int) []int {
 
 	return []int{} // No solution found
 }
+
+// https://go.dev/play/p/D1Y-VRXkL_v
 func BracketBalanced(str string) bool {
 	res := true
 	compare := map[rune]rune{
@@ -204,7 +206,7 @@ func IsBalanced2(text string) bool {
 // func mapSlice(data map[int]int) []int{
 
 // }
-
+// https://go.dev/play/p/9JuoLZenSex
 func findMajorityElement(nums []int) int {
 	mapa := make(map[int]int)
 	for _, v := range nums {

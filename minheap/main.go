@@ -71,7 +71,7 @@ func parent(index int) int {
 }
 func main() {
 	m := &MinHeap{}
-	as := []int{10, 20, 30, 12, 45, 6, 7, 46, 78}
+	as := []int{10, 14, 19, 26, 31, 44, 35, 33, 19, 42, 27}
 	for _, v := range as {
 		m.Insert(v)
 		fmt.Println(m)
