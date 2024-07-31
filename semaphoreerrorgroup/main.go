@@ -27,7 +27,7 @@ func dosomething(i int) error {
 		return errors.New("its divisble by 21")
 	}
 	return nil
-}
+} 
 func main() {
 	errGroup, ctx := errgroup.WithContext(context.Background())
 	for i := 0; i < 1000; i++ {

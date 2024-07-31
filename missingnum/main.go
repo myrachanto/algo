@@ -135,6 +135,8 @@ func BracketBalanced(str string) bool {
 	return res
 
 }
+
+// https://go.dev/play/p/9zgn9X6W1pD
 func BracketBalanced1(str string) bool {
 	res := true
 	compare := map[rune]rune{
