@@ -9,16 +9,19 @@ func recursiveFactorial(num int) int {
 	}
 	return num * recursiveFactorial(num-1)
 }
+
 // RecursiveFibinacci(int) int // 0, 1,1,2,3,5
 func RecursiveFibinacci(num int) int {
 	if num < 2 {
 		return num // 0, 1
 	}
+	// fmt.Println(">>>>>>>>>>>>>>>", num)
 	return RecursiveFibinacci(num-1) + RecursiveFibinacci(num-2)
 }
 
 // initialize a map to store the results
 var mapper = make(map[int]int)
+
 // RecursiveFibinacciEnhanced(int) int // 0, 1,1,2,3,5
 func RecursiveFibinacciEnhanced(num int) int {
 	if num < 2 {
@@ -34,6 +37,7 @@ func RecursiveFibinacciEnhanced(num int) int {
 	mapper[num] = res
 	return res
 }
+
 // fibinacciIterative(int) int // 0, 1,1,2,3,5
 func fibinacciIterative(num int) int {
 	// initialize a slice to store the results and store the first two results
@@ -56,6 +60,9 @@ func main() {
 	// 0, 1,1,2,3,5
 	fmt.Println(res)
 	res = fibinacciIterative(5)
+	// 0, 1,1,2,3,5
+	fmt.Println(res)
+	res = RecursiveFibinacciEnhanced(5)
 	// 0, 1,1,2,3,5
 	fmt.Println(res)
 }
