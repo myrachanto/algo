@@ -1,0 +1,12 @@
+[
+    {"name": "Uma", "age": 36, "role": 1},
+    {"name": "Vera", "age": 30, "role": 2},
+    {"name": "Will", "age": 33, "role": 3},
+    {"name": "Xena", "age": 40, "role": 1},
+    {"name": "Yara", "age": 28, "role": 2},
+    {"name": "Zane", "age": 45, "role": 3},
+    {"name": "Alice", "age": 31, "role": 1},
+    {"name": "Bob", "age": 35, "role": 2},
+    {"name": "Charlie", "age": 29, "role": 3},
+    {"name": "Diana", "age": 42, "role": 1}
+]

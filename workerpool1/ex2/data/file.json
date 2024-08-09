@@ -1,0 +1,12 @@
+[
+    {"name": "Alice", "age": 30, "role": 1},
+    {"name": "Bob", "age": 25, "role": 2},
+    {"name": "Charlie", "age": 35, "role": 1},
+    {"name": "David", "age": 40, "role": 3},
+    {"name": "Eva", "age": 29, "role": 2},
+    {"name": "Frank", "age": 50, "role": 1},
+    {"name": "Grace", "age": 32, "role": 3},
+    {"name": "Hank", "age": 45, "role": 2},
+    {"name": "Ivy", "age": 28, "role": 1},
+    {"name": "Jack", "age": 38, "role": 3}
+]

@@ -1,0 +1,12 @@
+[
+    {"name": "Karen", "age": 33, "role": 2},
+    {"name": "Leo", "age": 42, "role": 1},
+    {"name": "Mia", "age": 27, "role": 3},
+    {"name": "Nate", "age": 31, "role": 2},
+    {"name": "Olivia", "age": 37, "role": 1},
+    {"name": "Paul", "age": 29, "role": 3},
+    {"name": "Quinn", "age": 41, "role": 2},
+    {"name": "Rita", "age": 34, "role": 1},
+    {"name": "Sam", "age": 26, "role": 3},
+    {"name": "Tina", "age": 39, "role": 2}
+]
