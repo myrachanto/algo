@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"io"
 	"os"
 	"sync"
 )
@@ -25,10 +26,23 @@ func jsonReader(wg *sync.WaitGroup, work chan string, results chan Task, errs ch
 		// Move this line right after opening the file
 		func() {
 			defer file.Close()
+			// Check if the file is empty
+			stat, err := file.Stat()
+			if err != nil {
+				errs <- err
+				return
+			}
+			if stat.Size() == 0 {
+				return // Skip empty files
+			}
 
 			decoder := json.NewDecoder(file)
 			var tasks []Task
 			if err := decoder.Decode(&tasks); err != nil {
+				if err == io.EOF {
+					// Ignore EOF errors for empty files
+					return
+				}
 				errs <- err
 				return
 			}
